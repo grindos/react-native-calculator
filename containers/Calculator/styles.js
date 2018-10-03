@@ -10,7 +10,7 @@ export default StyleSheet.create({
   },
   saved: {
     flex: 1,
-    fontSize: 30,
+    fontSize: 25,
     color: 'grey',
     paddingTop: 30,
   },

@@ -6,9 +6,12 @@ import { operatorClick } from '../../actions';
 import styles from '../../styles';
 
 const OperatorButton = ({ operator, onOperatorClick }) => (
-  <TouchableOpacity style={styles.button} onPress={() => {
-    onOperatorClick(operator)
-  }}>
+  <TouchableOpacity
+    style={styles.button}
+    onPress={() => {
+      onOperatorClick(operator);
+    }}
+  >
     <Text>
       {operator}
     </Text>

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "expo": "^30.0.1",
+    "prop-types": "^15.6.2",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "react-redux": "^5.0.7",
@@ -17,5 +18,14 @@
     "redux-logger": "^3.0.6",
     "redux-promise-middleware": "^5.1.1",
     "reselect": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1"
   }
 }

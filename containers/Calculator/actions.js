@@ -9,7 +9,7 @@ export const operatorClick = operator => ({
   type: 'OPERATOR',
   payload: {
     operator,
-  }
+  },
 });
 
 export const clear = () => ({
@@ -22,4 +22,8 @@ export const equals = () => ({
 
 export const back = () => ({
   type: 'BACK',
+});
+
+export const signToggle = () => ({
+  type: 'TOGGLE_SIGN',
 });
