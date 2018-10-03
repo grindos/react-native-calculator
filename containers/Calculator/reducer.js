@@ -5,7 +5,7 @@ const defaultState = {
   enter: false,
 };
 
-const formatNumber = (number) => {
+const formatNumber = number => {
   const intPart = `${Math.abs(Math.trunc(number))}`;
   if (intPart.length > 10) {
     return '0';
@@ -33,7 +33,7 @@ const calculate = (firstArg, secondArg, operator) => {
   }
 };
 
-const removeDotInTheEnd = (str) => {
+const removeDotInTheEnd = str => {
   if (str[str.length - 1] === '.') {
     return str.slice(0, str.length - 1);
   }

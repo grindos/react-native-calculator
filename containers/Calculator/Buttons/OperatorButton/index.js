@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { TouchableOpacity, Text } from 'react-native';
 
 import { operatorClick } from '../../actions';
 import styles from '../../styles';
@@ -17,6 +18,10 @@ const OperatorButton = ({ operator, onOperatorClick }) => (
     </Text>
   </TouchableOpacity>
 );
+OperatorButton.propTypes = {
+  operator: PropTypes.string,
+  onOperatorClick: PropTypes.func,
+};
 
 const mapDispatchToProps = {
   onOperatorClick: operatorClick,

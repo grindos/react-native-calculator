@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
+import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import { selectCurrentNumber, selectSavedNumber, selectOperator } from '../selectors';
-import { changeNumber } from '../actions';
 import styles from '../styles';
 
 const InputField = ({ currentNumber, savedNumber, operator }) => (
@@ -19,6 +19,11 @@ const InputField = ({ currentNumber, savedNumber, operator }) => (
     </Text>
   </View>
 );
+InputField.propTypes = {
+  currentNumber: PropTypes.string,
+  savedNumber: PropTypes.string,
+  operator: PropTypes.string,
+};
 
 const mapStateToProps = createStructuredSelector({
   currentNumber: selectCurrentNumber,
