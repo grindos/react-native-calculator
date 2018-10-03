@@ -1,3 +1,12 @@
+import {
+  ADD_SYMBOL,
+  OPERATOR,
+  CLEAR,
+  EQUALS,
+  BACK,
+  TOGGLE_SIGN,
+} from './constants';
+
 const defaultState = {
   savedNumber: null,
   currentNumber: '0',
@@ -42,7 +51,7 @@ const removeDotInTheEnd = str => {
 
 const Calculator = (state = defaultState, action) => {
   switch (action.type) {
-    case 'ADD_SYMBOL':
+    case ADD_SYMBOL:
       const newSymbol = action.payload.symbol;
       if (newSymbol !== '.' && (state.currentNumber === '0' || !state.enter)) {
         return {
@@ -69,7 +78,7 @@ const Calculator = (state = defaultState, action) => {
         enter: true,
         currentNumber: `${state.currentNumber}${newSymbol}`,
       };
-    case 'OPERATOR':
+    case OPERATOR:
       if (!state.enter && state.savedNumber !== null) {
         return {
           ...state,
@@ -86,7 +95,7 @@ const Calculator = (state = defaultState, action) => {
         operator: action.payload.operator,
         enter: false,
       };
-    case 'CLEAR':
+    case CLEAR:
       return {
         ...state,
         savedNumber: null,
@@ -94,7 +103,7 @@ const Calculator = (state = defaultState, action) => {
         operator: null,
         enter: false,
       };
-    case 'EQUALS':
+    case EQUALS:
       if (state.savedNumber === null) {
         return state;
       }
@@ -105,7 +114,7 @@ const Calculator = (state = defaultState, action) => {
         operator: null,
         enter: false,
       };
-    case 'BACK':
+    case BACK:
       if (state.currentNumber.length > 1 && state.enter) {
         return {
           ...state,
@@ -117,7 +126,7 @@ const Calculator = (state = defaultState, action) => {
         currentNumber: '0',
         enter: false,
       };
-    case 'TOGGLE_SIGN':
+    case TOGGLE_SIGN:
       if (state.currentNumber === '0') {
         return state;
       }

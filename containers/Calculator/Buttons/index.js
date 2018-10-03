@@ -2,12 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import {
-  View, TouchableOpacity, Text,
-} from 'react-native';
-import {
-  back, clear, equals, signToggle,
-} from '../actions';
+import { View, TouchableOpacity, Text } from 'react-native';
+import { back, clear, equals, signToggle } from '../actions';
 import SymbolButton from './SymbolButton';
 import OperatorButton from './OperatorButton';
 import styles from '../styles';

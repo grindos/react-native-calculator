@@ -1,29 +1,38 @@
+import {
+  ADD_SYMBOL,
+  OPERATOR,
+  CLEAR,
+  EQUALS,
+  BACK,
+  TOGGLE_SIGN,
+} from './constants';
+
 export const symbolClick = symbol => ({
-  type: 'ADD_SYMBOL',
+  type: ADD_SYMBOL,
   payload: {
     symbol,
   },
 });
 
 export const operatorClick = operator => ({
-  type: 'OPERATOR',
+  type: OPERATOR,
   payload: {
     operator,
   },
 });
 
 export const clear = () => ({
-  type: 'CLEAR',
+  type: CLEAR,
 });
 
 export const equals = () => ({
-  type: 'EQUALS',
+  type: EQUALS,
 });
 
 export const back = () => ({
-  type: 'BACK',
+  type: BACK,
 });
 
 export const signToggle = () => ({
-  type: 'TOGGLE_SIGN',
+  type: TOGGLE_SIGN,
 });
