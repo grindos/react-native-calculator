@@ -115,7 +115,9 @@ const Calculator = (state = defaultState, action) => {
         enter: false,
       };
     case BACK:
-      if (state.currentNumber.length > 1 && state.enter) {
+      const isNegative = (state.currentNumber[0] === '-') ? 1 : 0;
+      const threshold = 1 + isNegative;
+      if (state.currentNumber.length > threshold && state.enter) {
         return {
           ...state,
           currentNumber: state.currentNumber.slice(0, state.currentNumber.length - 1),
